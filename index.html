@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共通テストカウントダウン (現高2生版)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header-zone">
+            <div class="date-display">
+                <span class="date-label">現在：</span>
+                <span id="today-date" class="date-text">2026年00月00日 (曜日)</span>
+            </div>
+            <div class="date-display target-display">
+                <span class="date-label">本番：</span>
+                <span id="target-date-display" class="date-text">2028年1月15日 (土)</span>
+            </div>
+        </header>
+
+        <main class="countdown-zone">
+            <h1 class="title">共通テストまで</h1>
+            
+            <div class="main-countdown">
+                <span id="total-days" class="days-number">---</span>
+                <span class="days-unit">日</span>
+            </div>
+
+            <div class="detailed-countdown" id="detailed-box">
+                <span class="detailed-label">（分割：</span>
+                <span id="remaining-years">-</span>年
+                <span id="remaining-months">--</span>ヶ月
+                <span id="remaining-days">--</span>日
+                <span class="detailed-label">）</span>
+            </div>
+
+        </main>
+
+        <footer class="comment-zone">
+            <div class="comment-card">
+                <p id="daily-comment" class="comment-text">今日も一歩、前へ進おう。</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
