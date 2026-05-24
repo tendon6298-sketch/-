@@ -1,0 +1,143 @@
+/* ==========================================================================
+   全体の設定
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   ヘッダー部分（現在の日付 ＆ 本番の日付）
+   ========================================================================== */
+.header-zone {
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.date-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.date-display:last-child {
+    margin-bottom: 0;
+}
+
+.date-label {
+    color: #64748b; /* 「現在：」「本番：」のラベルは控えめに */
+}
+
+.date-text {
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/* 本番の日付を目立たせるアクセント */
+.target-display .date-text {
+    color: #93c5fd; /* 本番日は綺麗な薄い青色に */
+}
+
+/* ==========================================================================
+   メインのカウントダウン部分
+   ========================================================================== */
+.countdown-zone {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+}
+
+/* 【メイン】残り日数を最大サイズに */
+.main-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.days-number {
+    font-size: 5.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.days-unit {
+    font-size: 1.5rem;
+    color: #fbbf24;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+/* 【サブ】少し小さめの何年何ヶ月何日 */
+.detailed-countdown {
+    font-size: 1rem;
+    color: #94a3b8;
+    letter-spacing: 0.05em;
+}
+
+.detailed-countdown span {
+    color: #e2e8f0;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+.detailed-countdown .detailed-label {
+    color: #475569;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   フッター（一言コメント）
+   ========================================================================== */
+.comment-card {
+    background: rgba(251, 191, 36, 0.06);
+    border-left: 4px solid #f59e0b;
+    padding: 16px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.comment-text {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    text-align: left;
+}
